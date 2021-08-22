@@ -39,6 +39,9 @@ const CardList = () => {
         <section className="catalog">
 
             <div className="container">
+                <h1 className="catalog__title">
+                    Подбор по параметрам
+                </h1>
                 <div className="catalog__inner">
                     <div className="filter-wrapper">
                         <Filter filteredCards={filteredCards}/>

@@ -1,6 +1,4 @@
-html {
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
 *,
 *::after,
@@ -37,7 +35,7 @@ button {
   font: inherit;
   color: inherit;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
 body {
   background-color: #f3f3f3;
   font-family: 'Montserrat', sans-serif;
@@ -49,7 +47,13 @@ body {
 }
 
 .catalog {
-  margin-top: 100px;
+  &__title {
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 80px;
+  }
   margin-bottom: 100px;
   &__grid {
     display: -ms-grid;
@@ -131,37 +135,56 @@ body {
   }
 }
 @media (max-width: 1340px) {
-  .catalog__grid {
-    -ms-grid-columns: 1fr 30px 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-    padding-left: 30px;
+  .catalog {
+    &__title {
+      font-size: 45px;
+      margin-top: 65px;
+      margin-bottom: 60px;
+    }
+    &____grid {
+      -ms-grid-columns: 1fr 30px 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      padding-left: 30px;
+    }
   }
+
+
   .filter-wrapper {
     width: calc(33.3% - 2.3vw);
     min-width: calc(33.3% - 2.3vw);
   }
 }
 @media (max-width: 1000px) {
-  .catalog__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .catalog {
+    &__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
 
-    -webkit-box-align: center;
+      -webkit-box-align: center;
 
-    -ms-flex-align: center;
+      -ms-flex-align: center;
 
-    align-items: center;
+      align-items: center;
+
+    }
+    &__grid {
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 0;
+    }
+    &__title {
+      font-size: 30px;
+      margin-top: 45px;
+      margin-bottom: 40px;
+    }
 
   }
-  .catalog__grid {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    padding-left: 0;
-  }
+
+
   .filter-wrapper {
 
     width: 100%;
