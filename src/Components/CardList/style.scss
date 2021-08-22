@@ -5,6 +5,7 @@ html {
 *,
 *::after,
 *::before {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -38,8 +39,8 @@ button {
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 body {
-    background-color: #f3f3f3;
-    font-family: 'Montserrat', sans-serif;
+  background-color: #f3f3f3;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
@@ -50,19 +51,21 @@ body {
 .catalog {
   margin-top: 100px;
   margin-bottom: 100px;
-   &__grid {
+  &__grid {
+    display: -ms-grid;
     display: grid;
     grid-auto-rows: 1fr;
+    -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     padding-left: 40px;
-     width: 100%;
-   }
-   &__item {
-       background-color: #fff;
-       padding: 30px 0 40px 0;
-   }
+    width: 100%;
+  }
+  &__item {
+    background-color: #fff;
+    padding: 30px 0 40px 0;
+  }
   &__item-img {
     width: 100%;
     padding-top: 70%;
@@ -86,7 +89,10 @@ body {
     font-weight: 600;
   }
   &__item-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     font-size: 11px;
     font-weight: 400;
@@ -99,6 +105,8 @@ body {
     margin-top: 14px;
   }
   &__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
   }
@@ -111,10 +119,10 @@ body {
 
 
 @media (min-width: 1000px ) {
-.filter {
-  position: sticky;
-  top: 70px;
-}
+  .filter {
+    position: sticky;
+    top: 70px;
+  }
 }
 @media  (max-width: 1580px) {
   .container {
@@ -124,6 +132,7 @@ body {
 }
 @media (max-width: 1340px) {
   .catalog__grid {
+    -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
@@ -136,12 +145,20 @@ body {
 }
 @media (max-width: 1000px) {
   .catalog__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+
+    -webkit-box-align: center;
+
+    -ms-flex-align: center;
 
     align-items: center;
 
   }
   .catalog__grid {
+    -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
     padding-left: 0;
   }
@@ -157,7 +174,9 @@ body {
 
 @media (max-width: 720px) {
   .catalog__grid {
+
     max-width: 400px;
+    -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 40px;
   }
@@ -168,4 +187,3 @@ body {
     padding: 20px 0 ;
   }
 }
-

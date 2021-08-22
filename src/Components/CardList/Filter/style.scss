@@ -7,6 +7,7 @@
   font-size: 15px;
   background-color: transparent;
   border: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .rc-slider-tooltip-placement-top .rc-slider-tooltip-arrow {
@@ -33,19 +34,30 @@
     width: 14px;
     height: 14px;
     background-color: #e9292c;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
 
 }
 .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
   border-color: #fff;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 auto;
   background-color: #fff;
@@ -59,6 +71,8 @@
     text-align: center;
     padding: 13px 0;
     color: #000;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
     cursor: pointer;
     text-decoration: none;
@@ -71,7 +85,11 @@
 
   }
   &__show-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -83,7 +101,11 @@
     font-weight: 300;
   }
   &__fromto {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 8px;
     font-weight: 600;
@@ -99,6 +121,8 @@
 
   }
   &__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   &__btn, &__btn--active {
@@ -106,6 +130,8 @@
     margin-left: -1px;
     padding: 0;
     cursor: pointer;
+    -webkit-transition: background .5s;
+    -o-transition: background .5s;
     transition: background .5s;
     width: 100%;
     height: 42px;
@@ -126,6 +152,8 @@
     margin-left: -1px;
     padding: 0;
     cursor: pointer;
+    -webkit-transition: background .5s;
+    -o-transition: background .5s;
     transition: background .5s;
     width: 100%;
     height: 42px;
@@ -141,6 +169,3 @@
     color: #fff;
   }
 }
-
-
-
