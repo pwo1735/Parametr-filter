@@ -1,0 +1,8 @@
+export const ActionTypes = {
+    SET_CARDS: "SET_CARDS",
+    SET_SQUARE: "SET_SQUARE",
+    SET_FLOOR: "SET_FLOOR",
+    SET_PRICE: "SET_PRICE",
+    SET_ROOMS: "SET_ROOMS",
+    SET_DECOR: "SET_DECOR"
+}

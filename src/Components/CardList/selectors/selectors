@@ -1,0 +1,18 @@
+import {createSelector} from "reselect";
+import data from "../data";
+
+const getCards = state => state.allCards.cards.rooms
+
+const selectAllCards = createSelector(
+	getCards,
+	cards => {
+		let filteredCards =[]
+		cards.forEach( item => {
+			let onceFilter = data.filter( card => (card.rooms ===item))
+			filteredCards =[...filteredCards, ...onceFilter]
+			return filteredCards
+		})
+
+	}
+)
+export default selectAllCards

@@ -1,0 +1,10 @@
+import { createSelector } from "reselect"
+
+const selectAllCards = state => state.allCards.cards
+const selectSquare = state => state.filter.square
+
+export const selectPrice = createSelector(
+	selectAllCards,
+	allCards => allCards.filter(card => card.square > 1000 )
+)
+
